@@ -37,4 +37,39 @@ public class ProductTest {
         String retrievedDescription = product.getDescription();
         Assertions.assertEquals(description, retrievedDescription);
     }
+
+    @Test //Turgay
+    public void testSetId() {
+        Integer id = 1;
+        product.setId(id);
+        Assertions.assertEquals(id, product.getId());
+    }
+
+    @Test //Turgay
+    public void testGetId() {
+        Integer id = 1;
+        product.setId(id);
+        Integer retrievedId = product.getId();
+        Assertions.assertEquals(id, retrievedId);
+    }
+
+    @Test //Turgay
+    public void testConstructor() {
+
+        String title = "Test Title";
+        Double price = 10.0;
+        String category = "Test Category";
+        String description = "Test Description";
+        String image = "test_image.jpg";
+
+
+        Product newProduct = new Product(title, price, category, description, image);
+
+
+        Assertions.assertEquals(title, newProduct.getTitle());
+        Assertions.assertEquals(price, newProduct.getPrice());
+        Assertions.assertEquals(category, newProduct.getCategory());
+        Assertions.assertEquals(description, newProduct.getDescription());
+        Assertions.assertEquals(image, newProduct.getImage());
+    }
 }
