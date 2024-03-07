@@ -3,6 +3,7 @@ package com.example.produktapi.model;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
 
 public class ProductTest {
     private Product product;
@@ -71,5 +72,24 @@ public class ProductTest {
         Assertions.assertEquals(category, newProduct.getCategory());
         Assertions.assertEquals(description, newProduct.getDescription());
         Assertions.assertEquals(image, newProduct.getImage());
+    }
+
+    @Test //Yevgeniia Kornilova
+    @DisplayName("test of getCategory")
+    void testGetCategory(){
+        Product testProduct = new Product("TestTitle",
+                100.00,
+                "TestCategory",
+                "TestDescription",
+                "/image");
+        Assertions.assertEquals("TestCategory", testProduct.getCategory());
+    }
+
+    @Test //Yevheniia Kornilova
+    @DisplayName("test of setCategory")
+    void testSetCategory(){
+        Product testProduct = new Product();
+        testProduct.setCategory("TestCategory2");
+        Assertions.assertEquals("TestCategory2", testProduct.getCategory());
     }
 }
