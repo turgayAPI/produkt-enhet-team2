@@ -92,4 +92,49 @@ public class ProductTest {
         testProduct.setCategory("TestCategory2");
         Assertions.assertEquals("TestCategory2", testProduct.getCategory());
     }
+
+    @Test //Jaime
+    @DisplayName("Test get title")
+
+    public void testGetTitle(){
+        String title = "testTitle";
+        product.setTitle(title);
+
+        String getTitle = product.getTitle();
+        Assertions.assertEquals(title, getTitle);
+
+    }
+
+    @Test //Jaime
+    @DisplayName("Test get image")
+
+    public void testGetImage(){
+        String image = "testImage";
+        product.setImage(image);
+
+        String getImage = product.getImage();
+        Assertions.assertEquals(image, getImage);
+
+    }
+
+    @Test //Jaime
+    @DisplayName("Test set title")
+
+    public void testSetTitle(){
+        String title = "testTitle";
+        product.setTitle(title);
+
+        Assertions.assertEquals(title, product.getTitle());
+
+    }
+
+    @Test //Jaime
+    @DisplayName("Test set image")
+
+    public void testSetImage(){
+        String image = "testImage";
+        product.setImage(image);
+
+        Assertions.assertEquals(image, product.getImage() );
+    }
 }
