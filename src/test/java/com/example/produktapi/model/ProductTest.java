@@ -84,5 +84,5 @@ public class ProductTest {
         Assertions.assertEquals(image, product.getImage() );
     }
 
-
+//
 }
